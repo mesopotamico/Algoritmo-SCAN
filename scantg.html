@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <!-- Font Awesome 5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    .algo {
+      padding: 3%;
+      margin: 3%;
+      height: 130vh;
+    }
+  </style>
+
+</head>
+
+<body>
+
+    </header>
+
+    <div class="algo py-3">
+
+      <h1>Algoritmo SCAN</h1>
+
+      <div class="visualizer tm-timeline-item">
+        <div class="tm-timeline-item-inner">
+
+          <div class="new tm-timeline-description-wrap">
+            <div class="tm-bg-dark tm-timeline-description">
+
+              <div class="">
+                <div class="form-container-res" id="ifManualInput" style="display:block">
+                  <label class="col-form-label">Ingresa la secuencia</label>
+                  <input id="Sequence" class="form-control" oninput="resetScanResult()"
+                    placeholder="Ej: 10, 25, 40  (Máximo valor = 199)" />
+                  <p></p>
+                
+                  <div class="center-run">
+                    <button class="btn btn-outline-primary btn-outline-light" onclick="scan_click()" id="SCAN">Ejecutar</button>
+                  </div>
+                  <br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="newc tm-bg-dark-light tm-timeline-description">
+        <h3 class="tm-text-orange tm-font-400">Resultado:</h3>
+
+        <div class="scanf-output-man" id="ifManualOutput" style="display:block">
+          <label>Tiempo de la secuencia:&nbsp;</label><span style="font-weight: bolder; color: #000000"
+            id="scan_totalSeekCount"></span>
+          <p></p>
+          <label>Ejecución de la secuencia:&nbsp;</label><span style="font-weight: bolder; color: #000000"
+            id="scan_finalOrder"></span>
+          <p></p>
+          <p></p>
+          <canvas id="scanChart" width="800" height="400"></canvas>
+          <div id="betweenButton">
+
+          </div>
+        </div>
+
+        <div class="tm-timeline-connector-vertical">
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="scantg.js"></script>
+
+</body>
+
+</html>
